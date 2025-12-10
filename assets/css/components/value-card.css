@@ -1,0 +1,106 @@
+/* 
+ * Component - Value Cards
+ * Cartes de valeurs avec rotations Neo-Brutalism
+ */
+
+.values-section {
+    padding: var(--space-3xl) var(--space-xl);
+    background: var(--bg);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2xl);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.value-card {
+    background: white;
+    padding: var(--space-2xl);
+    border: var(--border-width-thick) solid var(--dark);
+    box-shadow: var(--shadow-lg) var(--dark);
+    transition: all var(--transition-normal);
+    position: relative;
+}
+
+.value-card:nth-child(1) {
+    transform: rotate(-2deg);
+    background: var(--nature);
+    color: white;
+}
+
+.value-card:nth-child(2) {
+    transform: rotate(1deg);
+    margin-top: var(--space-2xl);
+}
+
+.value-card:nth-child(3) {
+    transform: rotate(-1deg);
+    background: var(--primary);
+    color: white;
+}
+
+.value-card:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: var(--shadow-xl) var(--dark);
+}
+
+.value-card:focus-within {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: var(--shadow-xl) var(--dark);
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
+
+.value-number {
+    font-size: 8rem;
+    font-weight: 900;
+    opacity: 0.1;
+    position: absolute;
+    top: -2rem;
+    right: 1rem;
+    font-family: var(--font-display);
+}
+
+.value-card h3 {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+    position: relative;
+    z-index: 2;
+}
+
+.value-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .value-card {
+        transform: rotate(0deg) !important;
+        margin-top: 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .value-number {
+        font-size: 4rem;
+    }
+    
+    .value-card h3 {
+        font-size: 1.8rem;
+    }
+    
+    .value-card {
+        box-shadow: var(--shadow-sm) var(--dark);
+    }
+}

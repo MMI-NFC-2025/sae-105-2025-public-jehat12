@@ -1,0 +1,43 @@
+/* 
+ * Variables CSS - Festival Jumelages
+ * Design Tokens pour cohérence visuelle
+ */
+
+:root {
+    /* Couleurs principales */
+    --primary: #2B6B4D;      /* Vert foncé des affiches */
+    --accent: #F59E42;       /* Orange chaleureux */
+    --nature: #7AB665;       /* Vert clair nature */
+    --bg: #F5F3E8;           /* Beige crème */
+    --dark: #1A1A1A;         /* Noir */
+    --white: #FFFFFF;        /* Blanc */
+    
+    /* Typographie */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Espacements */
+    --space-xs: 0.5rem;      /* 8px */
+    --space-sm: 1rem;        /* 16px */
+    --space-md: 1.5rem;      /* 24px */
+    --space-lg: 2rem;        /* 32px */
+    --space-xl: 3rem;        /* 48px */
+    --space-2xl: 4rem;       /* 64px */
+    --space-3xl: 6rem;       /* 96px */
+    
+    /* Bordures */
+    --border-width: 3px;
+    --border-width-thick: 4px;
+    --border-width-heavy: 6px;
+    
+    /* Ombres portées (Neo-Brutalism) */
+    --shadow-sm: 4px 4px 0;
+    --shadow-md: 6px 6px 0;
+    --shadow-lg: 8px 8px 0;
+    --shadow-xl: 12px 12px 0;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}

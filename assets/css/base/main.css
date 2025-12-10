@@ -1,0 +1,83 @@
+/* 
+ * Base - Styles globaux
+ * Reset et styles de base pour tout le site
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { 
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--dark);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Typographie */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+h1 {
+    font-size: clamp(3rem, 8vw, 8rem);
+}
+
+h2 {
+    font-size: clamp(2.5rem, 6vw, 6rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Liens */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Boutons et formulaires */
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Classes utilitaires pour accessibilité */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

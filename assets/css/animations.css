@@ -1,0 +1,386 @@
+/* 
+ * Animations avancées et effets 3D
+ * Festival Jumelages
+ */
+
+/* === HERO ILLUSTRATIONS ANIMÉES === */
+.hero-illustration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Guitare flottante */
+.floating-guitar {
+    position: absolute;
+    right: 10%;
+    top: 15%;
+    width: 150px;
+    height: 220px;
+    opacity: 0.3;
+    animation: float-guitar 8s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes float-guitar {
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg);
+    }
+    50% { 
+        transform: translateY(-30px) rotate(5deg);
+    }
+}
+
+/* Notes de musique flottantes */
+.floating-note {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    opacity: 0.4;
+}
+
+.note-1 {
+    left: 15%;
+    top: 25%;
+    animation: float-note 6s ease-in-out infinite;
+}
+
+.note-2 {
+    right: 25%;
+    top: 60%;
+    animation: float-note 7s ease-in-out infinite 1s;
+}
+
+.note-3 {
+    left: 30%;
+    bottom: 20%;
+    animation: float-note 5s ease-in-out infinite 2s;
+}
+
+@keyframes float-note {
+    0%, 100% { 
+        transform: translate(0, 0) scale(1);
+        opacity: 0.4;
+    }
+    50% { 
+        transform: translate(20px, -40px) scale(1.2);
+        opacity: 0.7;
+    }
+}
+
+/* === FORMES 3D ANIMÉES === */
+.shape-3d {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(245, 196, 0, 0.1), rgba(10, 75, 160, 0.1));
+    backdrop-filter: blur(50px);
+    animation: morph 15s ease-in-out infinite;
+}
+
+.shape-1 {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    left: -100px;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -50px;
+    right: 10%;
+    animation-delay: 5s;
+}
+
+.shape-3 {
+    width: 200px;
+    height: 200px;
+    top: 40%;
+    left: 60%;
+    animation-delay: 10s;
+}
+
+@keyframes morph {
+    0%, 100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        transform: translate(20px, 30px) rotate(90deg);
+    }
+    50% {
+        border-radius: 70% 30% 50% 50% / 30% 70% 30% 70%;
+        transform: translate(-20px, 20px) rotate(180deg);
+    }
+    75% {
+        border-radius: 40% 60% 60% 40% / 70% 40% 60% 30%;
+        transform: translate(30px, -20px) rotate(270deg);
+    }
+}
+
+/* === EFFET GLITCH SUR TITRE === */
+.glitch {
+    position: relative;
+    color: var(--color-primary);
+}
+
+.glitch:hover::before,
+.glitch:hover::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch:hover::before {
+    animation: glitch-1 0.3s infinite;
+    color: var(--color-accent);
+    z-index: -1;
+}
+
+.glitch:hover::after {
+    animation: glitch-2 0.3s infinite;
+    color: var(--color-nature);
+    z-index: -2;
+}
+
+@keyframes glitch-1 {
+    0%, 100% {
+        clip: rect(0, 0, 0, 0);
+        transform: translate(0);
+    }
+    20% {
+        clip: rect(10px, 9999px, 30px, 0);
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        clip: rect(50px, 9999px, 70px, 0);
+        transform: translate(2px, -2px);
+    }
+    60% {
+        clip: rect(30px, 9999px, 50px, 0);
+        transform: translate(-2px, 2px);
+    }
+    80% {
+        clip: rect(70px, 9999px, 90px, 0);
+        transform: translate(2px, -2px);
+    }
+}
+
+@keyframes glitch-2 {
+    0%, 100% {
+        clip: rect(0, 0, 0, 0);
+        transform: translate(0);
+    }
+    20% {
+        clip: rect(20px, 9999px, 40px, 0);
+        transform: translate(3px, -3px);
+    }
+    40% {
+        clip: rect(60px, 9999px, 80px, 0);
+        transform: translate(-3px, 3px);
+    }
+    60% {
+        clip: rect(40px, 9999px, 60px, 0);
+        transform: translate(3px, -3px);
+    }
+    80% {
+        clip: rect(80px, 9999px, 100px, 0);
+        transform: translate(-3px, 3px);
+    }
+}
+
+/* === BOUTON AVEC PULSE === */
+.btn-pulse {
+    animation: pulse-shadow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-shadow {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(245, 196, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 8px 30px rgba(245, 196, 0, 0.6);
+    }
+}
+
+/* === CARTES AVEC EFFET TILT 3D === */
+.card-tilt {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.card-tilt:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg) translateZ(20px);
+}
+
+/* === BADGE SUR CARTE === */
+.card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(10, 75, 160, 0.9);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+/* === TAG SUR CARTE === */
+.card-tag {
+    display: inline-block;
+    background: rgba(245, 196, 0, 0.15);
+    color: var(--color-nature);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+/* === HOVER LIFT EFFECT === */
+.card-hover-lift {
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card-hover-lift:hover {
+    transform: translateY(-15px) scale(1.03);
+}
+
+/* === ICÔNES CUSTOM ANIMÉES === */
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .icon-wrapper {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.custom-icon {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));
+}
+
+/* === PULSE CIRCLE (SVG) === */
+@keyframes pulse-circle {
+    0%, 100% {
+        r: 30;
+        opacity: 0.2;
+    }
+    50% {
+        r: 35;
+        opacity: 0.4;
+    }
+}
+
+.pulse-circle {
+    animation: pulse-circle 2s ease-in-out infinite;
+}
+
+/* === PARALLAX SCROLL EFFECT === */
+.parallax-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(-1px) scale(2);
+    z-index: 0;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .floating-guitar {
+        width: 100px;
+        height: 150px;
+        right: 5%;
+    }
+    
+    .floating-note {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .shape-3d {
+        display: none;
+    }
+    
+    .card-tilt:hover {
+        transform: translateY(-10px);
+    }
+}
+
+/* === LOADING ANIMATION === */
+@keyframes rotate-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-animate {
+    background: linear-gradient(270deg, var(--color-primary), var(--color-accent), var(--color-nature));
+    background-size: 600% 600%;
+    animation: rotate-gradient 10s ease infinite;
+}
+
+/* === TEXT REVEAL ANIMATION === */
+.text-reveal {
+    overflow: hidden;
+    position: relative;
+}
+
+.text-reveal::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-accent);
+    transform: translateX(-100%);
+    animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes reveal {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}

@@ -1,0 +1,68 @@
+/* 
+ * Component - Buttons
+ * Boutons Neo-Brutalism avec effet 3D
+ */
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border: var(--border-width-thick) solid var(--dark);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
+
+.btn-primary {
+    background: var(--white);
+    color: var(--dark);
+    box-shadow: var(--shadow-md) var(--dark);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0 var(--dark);
+}
+
+.btn-accent {
+    background: var(--accent);
+    color: var(--dark);
+    box-shadow: var(--shadow-md) var(--dark);
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0 var(--dark);
+}
+
+.btn-nature {
+    background: var(--nature);
+    color: white;
+    box-shadow: var(--shadow-md) var(--dark);
+}
+
+.btn-nature:hover,
+.btn-nature:focus {
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0 var(--dark);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 0.9rem;
+        box-shadow: var(--shadow-sm) var(--dark);
+    }
+}

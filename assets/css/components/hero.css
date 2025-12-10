@@ -1,0 +1,130 @@
+/* 
+ * Component - Hero
+ * Section héro asymétrique avec illustration
+ */
+
+.hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding-top: 80px;
+}
+
+.hero-left {
+    background: linear-gradient(135deg, var(--primary), var(--nature));
+    padding: var(--space-3xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.hero-left::before {
+    content: 'FOLK';
+    position: absolute;
+    font-size: 20rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.05);
+    top: 50%;
+    left: -10%;
+    transform: translateY(-50%) rotate(-10deg);
+    font-family: var(--font-display);
+    pointer-events: none;
+}
+
+.hero-dates {
+    background: var(--accent);
+    color: var(--dark);
+    padding: var(--space-sm) var(--space-lg);
+    display: inline-block;
+    font-weight: 900;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: var(--space-lg);
+    border: var(--border-width-thick) solid var(--dark);
+    box-shadow: var(--shadow-lg) var(--dark);
+    transform: rotate(-2deg);
+}
+
+.hero-left h1 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 7rem);
+    color: var(--white);
+    line-height: 0.9;
+    margin-bottom: var(--space-lg);
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+
+.hero-left p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.3rem;
+    margin-bottom: var(--space-xl);
+    max-width: 500px;
+}
+
+.hero-right {
+    background: var(--accent);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Illustration graphique */
+.hero-graphic {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(15deg);
+}
+
+.hero-graphic circle {
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { r: 100; opacity: 0.3; }
+    50% { r: 120; opacity: 0.6; }
+}
+
+.hero-numbers {
+    position: absolute;
+    font-size: 25rem;
+    font-weight: 900;
+    font-family: var(--font-display);
+    color: rgba(0, 0, 0, 0.1);
+    letter-spacing: -10px;
+    line-height: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-left {
+        clip-path: none;
+        padding: 8rem var(--space-lg) var(--space-2xl);
+    }
+    
+    .hero-right {
+        padding: var(--space-2xl) var(--space-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-left::before {
+        font-size: 10rem;
+    }
+    
+    .hero-numbers {
+        font-size: 12rem;
+    }
+}

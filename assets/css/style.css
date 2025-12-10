@@ -1,0 +1,21 @@
+/* 
+ * Festival Jumelages - Architecture CSS Modulaire (ITCSS)
+ * Design: Neo-Brutalism + Broken Grid + Bold Typography
+ * Palette: Inspirée des affiches officielles du festival
+ */
+
+/* === UTILS === */
+@import "utils/variables.css";
+
+/* === BASE === */
+@import "base/main.css";
+
+/* === LAYOUT === */
+@import "layout/header.css";
+@import "layout/footer.css";
+
+/* === COMPONENTS === */
+@import "components/button.css";
+@import "components/hero.css";
+@import "components/value-card.css";
+@import "components/artist-card.css";

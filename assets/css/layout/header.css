@@ -1,0 +1,108 @@
+/* 
+ * Layout - Header
+ * Navigation principale et menu burger
+ */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: var(--space-md) var(--space-xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 249, 238, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: var(--border-width) solid var(--dark);
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primary);
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition-normal);
+}
+
+nav a:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--accent);
+    transition: width var(--transition-normal);
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+.burger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: var(--border-width) solid var(--dark);
+}
+
+/* Menu mobile */
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--dark);
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        transform: translateX(-100%);
+        transition: transform var(--transition-normal);
+        z-index: 999;
+    }
+    
+    nav.active {
+        transform: translateX(0);
+    }
+    
+    nav a {
+        color: var(--white);
+        font-size: 2rem;
+    }
+    
+    .burger {
+        display: block;
+        z-index: 1001;
+    }
+}
