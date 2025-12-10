@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Festival Jumelages 2026 - Festival de musique folk à Montbéliard du 12 au 14 juin. Découvrez une programmation unique dans un cadre naturel exceptionnel.">
+    <title>Festival Jumelages 2026 - Musique Folk à Montbéliard</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style-new.css">
+    
+    <style>
+        /* CAROUSEL STYLES */
+        .carousel-container {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 80px;
+        }
+        
+        .carousel-wrapper {
+            overflow: hidden;
+            border: 4px solid var(--dark);
+            box-shadow: 12px 12px 0 var(--dark);
+            background: var(--dark);
+        }
+        
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .carousel-card {
+            min-width: 100%;
+            height: 500px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 3rem;
+            color: white;
+        }
+        
+        .carousel-card .artist-info {
+            z-index: 2;
+        }
+        
+        .carousel-card .artist-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 0.75rem 1.5rem;
+            font-weight: 900;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            border: 3px solid var(--dark);
+            box-shadow: 4px 4px 0 var(--dark);
+            margin-bottom: 1rem;
+        }
+        
+        .carousel-card h3 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            margin: 0.5rem 0;
+            letter-spacing: -2px;
+            text-shadow: 3px 3px 0 var(--dark);
+        }
+        
+        .carousel-card p {
+            font-size: 1.2rem;
+            margin: 0;
+            opacity: 0.95;
+        }
+        
+        /* Boutons de navigation */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--accent);
+            border: 4px solid var(--dark);
+            box-shadow: 6px 6px 0 var(--dark);
+            width: 60px;
+            height: 60px;
+            font-size: 3rem;
+            font-weight: 900;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+        
+        .carousel-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .carousel-btn:active {
+            box-shadow: 3px 3px 0 var(--dark);
+            transform: translateY(-50%) translate(3px, 3px);
+        }
+        
+        .carousel-btn.prev {
+            left: 0;
+        }
+        
+        .carousel-btn.next {
+            right: 0;
+        }
+        
+        /* Indicateurs */
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+        
+        .dot {
+            width: 16px;
+            height: 16px;
+            background: var(--bg);
+            border: 3px solid var(--dark);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .dot:hover {
+            background: var(--accent);
+            transform: scale(1.2);
+        }
+        
+        .dot.active {
+            background: var(--primary);
+            width: 40px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .carousel-container {
+                padding: 0 60px;
+            }
+            
+            .carousel-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 2rem;
+            }
+            
+            .carousel-card {
+                height: 400px;
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .carousel-container {
+                padding: 0 50px;
+            }
+            
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER MINIMAL -->
+    <header>
+        <div class="logo">Jumelages</div>
+        <button class="burger" aria-label="Menu de navigation" aria-expanded="false" aria-controls="mainNav">☰</button>
+        <nav id="mainNav">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="a-propos.html">À propos</a>
+            <a href="programme.html">Programme</a>
+            <a href="artistes.html">Artistes</a>
+            <a href="scenes.html">Scènes</a>
+            <a href="infos.html">Infos</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO ASYMÉTRIQUE -->
+    <main>
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-dates">12-14 JUIN 2026</div>
+            <h1>LE FESTIVAL FOLK GRATUIT</h1>
+            <p>Trois jours de musique, de nature et de partage au cœur de Montbéliard. Venez vibrer avec nous.</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="programme.html" class="btn btn-accent">VOIR LE PROGRAMME</a>
+                <a href="contact.html" class="btn btn-primary">DEVENIR BÉNÉVOLE</a>
+            </div>
+        </div>
+        
+        <div class="hero-right">
+            <!-- Illustration graphique -->
+            <svg class="hero-graphic" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="200" cy="200" r="100" fill="rgba(10, 75, 160, 0.3)" />
+                <circle cx="250" cy="150" r="80" fill="rgba(46, 94, 55, 0.4)" />
+                <circle cx="150" cy="250" r="90" fill="rgba(10, 75, 160, 0.2)" />
+            </svg>
+            
+            <div class="hero-numbers">2026</div>
+        </div>
+    </section>
+
+    <!-- VALEURS - GRILLE CASSÉE -->
+    <section class="values-section">
+        <div class="values-grid">
+            <div class="value-card">
+                <span class="value-number">01</span>
+                <h3>Éco-Responsable</h3>
+                <p>Un festival zéro déchet, alimentation locale et mobilité douce. Parce que la musique doit respecter la planète.</p>
+            </div>
+            
+            <div class="value-card">
+                <span class="value-number">02</span>
+                <h3>100% Folk</h3>
+                <p>Des artistes authentiques, des sonorités acoustiques, une programmation pointue qui célèbre le folk sous toutes ses formes.</p>
+            </div>
+            
+            <div class="value-card">
+                <span class="value-number">03</span>
+                <h3>Gratuit & Accessible</h3>
+                <p>La culture pour tous, sans barrière. Venez comme vous êtes, l'entrée est libre et l'esprit bienveillant.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TYPOGRAPHIE GÉANTE -->
+    <section class="big-text-section">
+        <h2>
+            UNE SCÈNE<br>
+            <span class="highlight">NATURE</span><br>
+            ET MUSIQUE
+        </h2>
+        <p style="font-size: 1.5rem; max-width: 800px; margin: 0 auto; color: #666;">
+            Au pied du château de Montbéliard, trois scènes accueillent les plus beaux noms du folk européen dans un cadre exceptionnel.
+        </p>
+    </section>
+
+    <!-- ARTISTES - CARROUSEL -->
+    <section class="artists-section">
+        <div class="section-header">
+            <h2>LES ARTISTES</h2>
+        </div>
+        
+        <div class="carousel-container" role="region" aria-label="Carrousel des artistes">
+            <button class="carousel-btn prev" onclick="moveCarousel(-1)" aria-label="Artiste précédent">‹</button>
+            
+            <div class="carousel-wrapper">
+                <div class="carousel-track">
+                    <!-- Card 1 -->
+                    <div class="carousel-card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&auto=format&fit=crop&q=80'); background-size: cover; background-position: center;">
+                        <div class="artist-info">
+                            <span class="artist-badge">VENDREDI 20H</span>
+                            <h3>Mountain Echoes</h3>
+                            <p>Folk rock énergique • Grande Scène</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="carousel-card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&auto=format&fit=crop&q=80'); background-size: cover; background-position: center;">
+                        <div class="artist-info">
+                            <span class="artist-badge">SAMEDI 21H</span>
+                            <h3>The Wandering Souls</h3>
+                            <p>Indie folk • Grande Scène</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="carousel-card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80'); background-size: cover; background-position: center;">
+                        <div class="artist-info">
+                            <span class="artist-badge">DIMANCHE 19H</span>
+                            <h3>Claire & Les Bois</h3>
+                            <p>Chanson folk • Grande Scène</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 4 -->
+                    <div class="carousel-card" style="background: linear-gradient(135deg, #7AB665, #2B6B4D);">
+                        <div class="artist-info">
+                            <span class="artist-badge" style="background: #F5F3E8; color: #1A1A1A;">TOUT LE WEEKEND</span>
+                            <h3>+15 Artistes</h3>
+                            <p>Découvrez toute la programmation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-btn next" onclick="moveCarousel(1)" aria-label="Artiste suivant">›</button>
+        </div>
+        
+        <!-- Indicateurs de navigation -->
+        <div class="carousel-dots" role="tablist" aria-label="Navigation du carrousel">
+            <button class="dot active" onclick="goToSlide(0)" role="tab" aria-label="Artiste 1" aria-selected="true"></button>
+            <button class="dot" onclick="goToSlide(1)" role="tab" aria-label="Artiste 2" aria-selected="false"></button>
+            <button class="dot" onclick="goToSlide(2)" role="tab" aria-label="Artiste 3" aria-selected="false"></button>
+            <button class="dot" onclick="goToSlide(3)" role="tab" aria-label="Artiste 4" aria-selected="false"></button>
+        </div>
+    </section>
+
+    <!-- PARTENAIRES -->
+    <section style="padding: 6rem 3rem; background: var(--bg); border-top: 6px solid var(--dark);">
+        <h2 style="font-size: clamp(3rem, 6vw, 6rem); font-weight: 900; font-family: var(--font-display); text-align: center; margin-bottom: 4rem; letter-spacing: -3px;">
+            NOS PARTENAIRES
+        </h2>
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+            <div style="background: white; padding: 3rem; border: 5px solid var(--dark); box-shadow: 8px 8px 0 var(--dark); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.5rem; text-align: center;">
+                VILLE DE<br>MONTBÉLIARD
+            </div>
+            <div style="background: white; padding: 3rem; border: 5px solid var(--dark); box-shadow: 8px 8px 0 var(--dark); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.5rem; text-align: center;">
+                RÉGION<br>BOURGOGNE
+            </div>
+            <div style="background: white; padding: 3rem; border: 5px solid var(--dark); box-shadow: 8px 8px 0 var(--dark); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.5rem; text-align: center;">
+                DÉPARTEMENT<br>DU DOUBS
+            </div>
+            <div style="background: white; padding: 3rem; border: 5px solid var(--dark); box-shadow: 8px 8px 0 var(--dark); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.5rem; text-align: center;">
+                CRÉDIT<br>AGRICOLE
+            </div>
+            <div style="background: white; padding: 3rem; border: 5px solid var(--dark); box-shadow: 8px 8px 0 var(--dark); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.5rem; text-align: center;">
+                FRANCE<br>CULTURE
+            </div>
+            <div style="background: white; padding: 3rem; border: 5px solid var(--dark); box-shadow: 8px 8px 0 var(--dark); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.5rem; text-align: center;">
+                BIO<br>COOP
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section style="background: var(--accent); padding: 8rem 3rem; text-align: center; border-top: 6px solid var(--dark);">
+        <h2 style="font-size: clamp(3rem, 8vw, 8rem); font-weight: 900; font-family: var(--font-display); margin-bottom: 2rem; color: var(--dark); line-height: 0.9;">
+            PRÊT À VIBRER ?
+        </h2>
+        <p style="font-size: 1.5rem; margin-bottom: 3rem; color: var(--dark); max-width: 700px; margin-left: auto; margin-right: auto;">
+            Gratuit • 12-14 Juin • Montbéliard
+        </p>
+        <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+            <a href="programme.html" class="btn btn-primary">VOIR LE PROGRAMME</a>
+            <a href="contact.html" class="btn btn-primary">NOUS CONTACTER</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Festival Jumelages</h4>
+                <p>Un événement culturel et éco-responsable au cœur de Montbéliard. Association loi 1901.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul style="list-style: none;">
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="artistes.html">Artistes</a></li>
+                    <li><a href="scenes.html">Scènes</a></li>
+                    <li><a href="infos.html">Infos pratiques</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul style="list-style: none;">
+                    <li><a href="contact.html">Formulaire</a></li>
+                    <li><a href="#">Bénévolat</a></li>
+                    <li><a href="#">Presse</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Suivez-nous</h4>
+                <ul style="list-style: none;">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Festival Jumelages • Site éco-conçu</p>
+        </div>
+    </footer>
+    </main>
+
+    <script>
+        // Menu mobile
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('nav');
+        
+        if (burger && nav) {
+            burger.addEventListener('click', () => {
+                const isOpen = burger.getAttribute('aria-expanded') === 'true';
+                
+                nav.classList.toggle('active');
+                burger.textContent = nav.classList.contains('active') ? '✕' : '☰';
+                burger.setAttribute('aria-expanded', !isOpen);
+                
+                // Empêcher le scroll quand le menu est ouvert
+                document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+            });
+        }
+        
+        // CAROUSEL
+        let currentSlide = 0;
+        const track = document.querySelector('.carousel-track');
+        const slides = document.querySelectorAll('.carousel-card');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
+        
+        function updateCarousel() {
+            const offset = -currentSlide * 100;
+            track.style.transform = `translateX(${offset}%)`;
+            
+            // Mise à jour des dots avec ARIA
+            dots.forEach((dot, index) => {
+                const isActive = index === currentSlide;
+                dot.classList.toggle('active', isActive);
+                dot.setAttribute('aria-selected', isActive);
+            });
+        }
+        
+        function moveCarousel(direction) {
+            currentSlide += direction;
+            
+            // Boucle infinie
+            if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            } else if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            }
+            
+            updateCarousel();
+        }
+        
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+        
+        // Auto-play (optionnel)
+        let autoplayInterval = setInterval(() => {
+            moveCarousel(1);
+        }, 5000);
+        
+        // Pause auto-play au survol
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoplayInterval);
+        });
+        
+        carouselContainer.addEventListener('mouseleave', () => {
+            autoplayInterval = setInterval(() => {
+                moveCarousel(1);
+            }, 5000);
+        });
+        
+        // Support tactile pour mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        carouselContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        carouselContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                moveCarousel(1);
+            }
+            if (touchEndX > touchStartX + 50) {
+                moveCarousel(-1);
+            }
+        }
+    </script>
+
+</body>
+</html>
