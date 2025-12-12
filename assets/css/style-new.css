@@ -152,6 +152,77 @@ nav a:focus-visible {
     outline-offset: 4px;
 }
 
+/* Bouton recherche */
+.search-toggle {
+    background: var(--accent);
+    border: var(--border-width) solid var(--dark);
+    box-shadow: 4px 4px 0 var(--dark);
+    padding: 0.6rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: var(--dark);
+    transition: all 0.2s ease;
+    z-index: 1001;
+}
+
+.search-toggle:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.search-toggle:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+.search-toggle svg {
+    display: block;
+}
+
+/* Dropdown recherche */
+.search-dropdown {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-bottom: var(--border-width) solid var(--dark);
+    box-shadow: 0 6px 0 var(--dark);
+    padding: 0;
+    z-index: 999;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.search-dropdown.active {
+    max-height: 100px;
+    padding: 1.5rem;
+}
+
+.search-dropdown input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: var(--border-width) solid var(--dark);
+    background: var(--white);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark);
+    box-shadow: 4px 4px 0 var(--dark);
+}
+
+.search-dropdown input:focus {
+    outline: none;
+    box-shadow: 6px 6px 0 var(--accent);
+}
+
+.search-dropdown input::placeholder {
+    color: var(--dark);
+    opacity: 0.4;
+}
+
 .burger {
     display: block;
     font-size: 1.8rem;
