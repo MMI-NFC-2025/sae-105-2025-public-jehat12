@@ -27,60 +27,77 @@ header {
     text-transform: uppercase;
 }
 
-/* Barre de recherche */
+/* Barre de recherche Neo-Brutalism */
 .search-bar {
+    position: relative;
     display: flex;
-    align-items: center;
-    background: var(--light);
+    align-items: stretch;
+    background: var(--white);
     border: var(--border-width) solid var(--dark);
-    box-shadow: 4px 4px 0 var(--dark);
-    overflow: hidden;
-    flex: 1;
-    max-width: 300px;
-    margin: 0 1rem;
+    box-shadow: var(--shadow-sm) var(--dark);
+    transition: var(--transition-fast);
+    margin: 0 auto;
+    max-width: 280px;
+}
+
+.search-bar:hover {
+    box-shadow: var(--shadow-md) var(--dark);
+    transform: translate(-2px, -2px);
 }
 
 .search-bar input {
     flex: 1;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
     border: none;
     background: transparent;
     font-family: var(--font-body);
     font-size: 0.9rem;
+    font-weight: 600;
     color: var(--dark);
     outline: none;
+    min-width: 0;
 }
 
 .search-bar input::placeholder {
     color: var(--dark);
-    opacity: 0.5;
+    opacity: 0.4;
+    font-weight: 500;
+}
+
+.search-bar input:focus {
+    outline: none;
 }
 
 .search-bar button {
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
     background: var(--accent);
     border: none;
     border-left: var(--border-width) solid var(--dark);
     cursor: pointer;
-    font-size: 1.2rem;
-    transition: var(--transition-normal);
+    transition: var(--transition-fast);
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--dark);
+    flex-shrink: 0;
 }
 
 .search-bar button:hover {
     background: var(--primary);
-    transform: translateY(-2px);
+    color: var(--white);
 }
 
 .search-bar button:active {
-    transform: translateY(0);
+    transform: scale(0.95);
 }
 
 .search-bar button:focus-visible {
-    outline: 3px solid var(--accent);
+    outline: 3px solid var(--primary);
     outline-offset: -3px;
+}
+
+.search-bar svg {
+    display: block;
 }
 
 nav {
