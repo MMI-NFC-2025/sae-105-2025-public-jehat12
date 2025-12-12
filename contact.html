@@ -76,11 +76,11 @@
         <div style="max-width: 800px; margin: 0 auto;">
             
             <form class="form-brutalist" action="#" method="POST">
-                <input type="text" name="nom" placeholder="Votre nom *" required>
-                <input type="email" name="email" placeholder="Votre email *" required>
-                <input type="tel" name="telephone" placeholder="Téléphone">
+                <input type="text" name="nom" placeholder="Votre nom *" aria-label="Nom complet" required>
+                <input type="email" name="email" placeholder="Votre email *" aria-label="Adresse email" required>
+                <input type="tel" name="telephone" placeholder="Téléphone" aria-label="Numéro de téléphone">
                 
-                <select name="sujet" required>
+                <select name="sujet" aria-label="Choisir un sujet de message" required>
                     <option value="">Sujet de votre message *</option>
                     <option value="billetterie">Billetterie</option>
                     <option value="programme">Programme</option>
@@ -90,9 +90,9 @@
                     <option value="autre">Autre</option>
                 </select>
                 
-                <textarea name="message" rows="8" placeholder="Votre message *" required></textarea>
+                <textarea name="message" rows="8" placeholder="Votre message *" aria-label="Votre message" required></textarea>
                 
-                <button type="submit">ENVOYER</button>
+                <button type="submit" aria-label="Envoyer le formulaire de contact">ENVOYER</button>
             </form>
 
         </div>
