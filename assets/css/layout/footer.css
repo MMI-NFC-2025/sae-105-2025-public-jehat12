@@ -54,20 +54,4 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-xl);
-    }
-}
 
-@media (max-width: 768px) {
-    footer {
-        padding: var(--space-2xl) var(--space-lg);
-    }
-    
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-lg);
-    }
-}

@@ -76,33 +76,3 @@ nav a.active::after {
 }
 
 /* Menu mobile */
-@media (max-width: 768px) {
-    nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: var(--dark);
-        flex-direction: column;
-        justify-content: center;
-        gap: 2rem;
-        transform: translateX(-100%);
-        transition: transform var(--transition-normal);
-        z-index: 999;
-    }
-    
-    nav.active {
-        transform: translateX(0);
-    }
-    
-    nav a {
-        color: var(--white);
-        font-size: 2rem;
-    }
-    
-    .burger {
-        display: block;
-        z-index: 1001;
-    }
-}

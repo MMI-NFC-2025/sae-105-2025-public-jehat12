@@ -96,33 +96,5 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-    .artists-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .artist-card:nth-child(1),
-    .artist-card:nth-child(4) {
-        grid-column: span 1;
-    }
-}
 
-@media (max-width: 768px) {
-    .artist-card {
-        min-height: 400px;
-    }
-    
-    .artist-info h3 {
-        font-size: 2rem;
-    }
-}
 
-@media (max-width: 480px) {
-    .artist-card {
-        min-height: 350px;
-    }
-    
-    .artist-info h3 {
-        font-size: 1.8rem;
-    }
-}

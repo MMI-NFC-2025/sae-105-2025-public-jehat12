@@ -104,27 +104,4 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-    .hero {
-        grid-template-columns: 1fr;
-    }
-    
-    .hero-left {
-        clip-path: none;
-        padding: 8rem var(--space-lg) var(--space-2xl);
-    }
-    
-    .hero-right {
-        padding: var(--space-2xl) var(--space-lg);
-    }
-}
 
-@media (max-width: 768px) {
-    .hero-left::before {
-        font-size: 10rem;
-    }
-    
-    .hero-numbers {
-        font-size: 12rem;
-    }
-}

@@ -59,10 +59,3 @@
 }
 
 /* Responsive */
-@media (max-width: 480px) {
-    .btn {
-        padding: 1rem 2rem;
-        font-size: 0.9rem;
-        box-shadow: var(--shadow-sm) var(--dark);
-    }
-}

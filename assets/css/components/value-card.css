@@ -79,28 +79,4 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-    .values-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-lg);
-    }
-    
-    .value-card {
-        transform: rotate(0deg) !important;
-        margin-top: 0 !important;
-    }
-}
 
-@media (max-width: 480px) {
-    .value-number {
-        font-size: 4rem;
-    }
-    
-    .value-card h3 {
-        font-size: 1.8rem;
-    }
-    
-    .value-card {
-        box-shadow: var(--shadow-sm) var(--dark);
-    }
-}

@@ -315,26 +315,6 @@
 }
 
 /* === RESPONSIVE === */
-@media (max-width: 768px) {
-    .floating-guitar {
-        width: 100px;
-        height: 150px;
-        right: 5%;
-    }
-    
-    .floating-note {
-        width: 30px;
-        height: 30px;
-    }
-    
-    .shape-3d {
-        display: none;
-    }
-    
-    .card-tilt:hover {
-        transform: translateY(-10px);
-    }
-}
 
 /* === LOADING ANIMATION === */
 @keyframes rotate-gradient {
