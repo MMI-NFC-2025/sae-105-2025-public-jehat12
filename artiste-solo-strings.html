@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Strings - Festival Jumelages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style-new.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Jumelages</div>
+        <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
+        <nav><a href="index.html">Accueil</a><a href="a-propos.html">À propos</a><a href="programme.html">Programme</a><a href="artistes.html" class="active">Artistes</a><a href="scenes.html">Scènes</a><a href="infos.html">Infos</a><a href="contact.html">Contact</a></nav>
+    </header>
+    <main>
+        <section style="padding: 12rem 2rem 4rem; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=1200'); background-size: cover; background-position: center; text-align: center; border-bottom: 6px solid var(--dark); min-height: 60vh; display: flex; flex-direction: column; justify-content: flex-end;">
+            <a href="artistes.html" style="display: inline-block; margin-bottom: 2rem; background: white; padding: 0.8rem 1.5rem; border: 3px solid var(--dark); font-weight: 900; text-decoration: none; color: var(--dark); box-shadow: 4px 4px 0 var(--dark); font-size: 0.9rem;">← RETOUR</a>
+            <h1 style="font-size: clamp(3rem, 10vw, 8rem); font-weight: 900; color: white; font-family: var(--font-display); line-height: 0.85; letter-spacing: -6px; margin-bottom: 1.5rem; text-shadow: 4px 4px 0 rgba(0,0,0,0.5);">SOLO<br>STRINGS</h1>
+            <span style="background: var(--accent); color: var(--dark); padding: 1rem 2rem; display: inline-block; font-weight: 900; font-size: 1.1rem; border: 4px solid var(--dark); box-shadow: 6px 6px 0 var(--dark); margin: 0 auto;">ACOUSTIQUE</span>
+        </section>
+        <section style="padding: 0; background: var(--dark); color: white;">
+            <div style="display: flex; flex-direction: column;">
+                <div style="padding: 2rem; text-align: center; border-bottom: 2px solid rgba(255,255,255,0.2);"><h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 0.5rem;">📅 DATE</h3><p style="font-size: 1.1rem;">Samedi 13 Juin 2026</p></div>
+                <div style="padding: 2rem; text-align: center; border-bottom: 2px solid rgba(255,255,255,0.2);"><h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 0.5rem;">🕐 HORAIRE</h3><p style="font-size: 1.1rem;">17h30 - 18h30</p></div>
+                <div style="padding: 2rem; text-align: center;"><h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 0.5rem;">🎸 SCÈNE</h3><p style="font-size: 1.1rem;">Scène Intime</p></div>
+            </div>
+        </section>
+        <section style="padding: 3rem 2rem; background: var(--bg);">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2 style="font-size: clamp(2.5rem, 8vw, 4rem); font-family: var(--font-display); font-weight: 900; margin-bottom: 2rem; letter-spacing: -3px;">L'HISTOIRE</h2>
+                <div style="background: white; padding: 2rem; border: 4px solid var(--dark); box-shadow: 8px 8px 0 var(--dark);">
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;"><strong>Solo Strings</strong> est le projet solo de Julien Moretti, guitariste virtuose qui a débuté sa carrière dans l'orchestre symphonique de Lyon avant de se tourner vers le folk acoustique en 2019.</p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">Armé uniquement de sa guitare acoustique et de sa voix grave, il crée des atmosphères hypnotiques mêlant fingerpicking complexe et mélodies épurées. Influencé par Nick Drake et José González, son jeu est d'une précision chirurgicale.</p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">Son premier album solo <em>"Six Cordes"</em> (2022) a surpris la critique par sa maturité et son minimalisme. Chaque note compte, chaque silence parle. C'est une musique pour l'écoute attentive.</p>
+                    <p style="font-size: 1.1rem; line-height: 1.8;">Sur la Scène Intime du Festival Jumelages, Solo Strings offrira un moment de pure contemplation musicale, où technique et émotion se rejoignent dans une performance acoustique exceptionnelle.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col"><h4>Festival Jumelages</h4><p>Un événement culturel et éco-responsable.</p></div>
+            <div class="footer-col"><h4>Navigation</h4><ul style="list-style: none;"><li><a href="programme.html">Programme</a></li><li><a href="artistes.html">Artistes</a></li></ul></div>
+            <div class="footer-col"><h4>Contact</h4><ul style="list-style: none;"><li><a href="contact.html">Formulaire</a></li></ul></div>
+            <div class="footer-col"><h4>Réseaux</h4><ul style="list-style: none;"><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 Festival Jumelages</p></div>
+    </footer>
+    <script>
+        const burger=document.querySelector('.burger'),nav=document.querySelector('nav');burger&&nav&&burger.addEventListener('click',()=>{const e='true'===burger.getAttribute('aria-expanded');nav.classList.toggle('active'),burger.textContent=nav.classList.contains('active')?'✕':'☰',burger.setAttribute('aria-expanded',!e),document.body.style.overflow=nav.classList.contains('active')?'hidden':''});
+    </script>
+</body>
+</html>
