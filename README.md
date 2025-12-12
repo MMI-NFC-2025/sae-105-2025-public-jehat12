@@ -1,5 +1,5 @@
 # SAE 105 2025
-Je n'avais pas öla search bar sur ma maquette, j'ai donc changé le header de la maquette pour ajouter barre de navigation.
+Je n'avais pas la search bar sur ma maquette, j'ai donc changé le header de la maquette pour ajouter barre de navigation.
 À compléter :
 
 - NOM :Bakiray
