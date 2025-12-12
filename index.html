@@ -148,15 +148,21 @@
     <!-- HEADER MINIMAL -->
     <header>
         <div class="logo">Jumelages</div>
+        
+        <!-- Bouton recherche -->
+        <button class="search-icon" aria-label="Ouvrir la recherche" aria-expanded="false">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+            </svg>
+        </button>
+        
+        <!-- Barre de recherche cachée -->
         <form class="search-bar" role="search">
-            <input type="search" placeholder="Artiste, scène..." aria-label="Rechercher">
-            <button type="submit" aria-label="Rechercher">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-            </button>
+            <input type="search" placeholder="Rechercher artiste, scène..." aria-label="Rechercher">
+            <button type="button" class="search-close" aria-label="Fermer la recherche">✕</button>
         </form>
+        
         <button class="burger" aria-label="Menu de navigation" aria-expanded="false" aria-controls="mainNav">☰</button>
         <nav id="mainNav">
             <a href="index.html" class="active">Accueil</a>
@@ -389,6 +395,47 @@
                 
                 // Empêcher le scroll quand le menu est ouvert
                 document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+            });
+        }
+
+        // Barre de recherche
+        const searchIcon = document.querySelector('.search-icon');
+        const searchBar = document.querySelector('.search-bar');
+        const searchClose = document.querySelector('.search-close');
+        const searchInput = document.querySelector('.search-bar input');
+        
+        if (searchIcon && searchBar) {
+            // Ouvrir la recherche
+            searchIcon.addEventListener('click', () => {
+                searchBar.classList.add('active');
+                searchIcon.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden';
+                setTimeout(() => searchInput.focus(), 100);
+            });
+            
+            // Fermer la recherche
+            searchClose.addEventListener('click', () => {
+                searchBar.classList.remove('active');
+                searchIcon.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+            
+            // Fermer avec Échap
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && searchBar.classList.contains('active')) {
+                    searchBar.classList.remove('active');
+                    searchIcon.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // Fermer en cliquant sur le fond
+            searchBar.addEventListener('click', (e) => {
+                if (e.target === searchBar) {
+                    searchBar.classList.remove('active');
+                    searchIcon.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
             });
         }
         
