@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Démo Effets - Festival Jumelages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <style>
+        .demo-section {
+            padding: 4rem 0;
+            border-bottom: 2px dashed #ddd;
+        }
+        .demo-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--color-accent);
+        }
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Jumelages - DÉMO</a>
+            <a href="index.html" class="btn btn-accent">← Retour au site</a>
+        </div>
+    </header>
+
+    <div class="container" style="padding: 4rem 0;">
+        <h1 style="text-align: center; margin-bottom: 1rem;">🎨 Galerie des Effets Visuels</h1>
+        <p style="text-align: center; margin-bottom: 4rem; color: #666;">Tous les effets originaux du site en un seul endroit</p>
+
+        <!-- 1. Illustrations SVG -->
+        <section class="demo-section">
+            <h2 class="demo-title">🎸 Illustrations SVG Animées</h2>
+            <div class="demo-grid">
+                <div class="card">
+                    <h3>Guitare Flottante</h3>
+                    <div style="height: 300px; position: relative; background: linear-gradient(135deg, #2E5E37, #4A8B58); border-radius: 12px;">
+                        <svg class="floating-guitar" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 120px;">
+                            <ellipse cx="100" cy="180" rx="60" ry="80" fill="#FFF9EE" opacity="0.9"/>
+                            <ellipse cx="100" cy="180" rx="35" ry="50" fill="#2E5E37"/>
+                            <rect x="90" y="50" width="20" height="130" fill="#1A1A1A" rx="10"/>
+                            <line x1="95" y1="50" x2="95" y2="250" stroke="#F5C400" stroke-width="1"/>
+                            <line x1="100" y1="50" x2="100" y2="250" stroke="#F5C400" stroke-width="1"/>
+                            <line x1="105" y1="50" x2="105" y2="250" stroke="#F5C400" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <p style="margin-top: 1rem;">Animation <code>float-guitar</code> : 8s ease-in-out</p>
+                </div>
+
+                <div class="card">
+                    <h3>Notes de Musique</h3>
+                    <div style="height: 300px; position: relative; background: linear-gradient(135deg, #0A4BA0, #3B7DD8); border-radius: 12px;">
+                        <svg class="floating-note note-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 20%; left: 20%;">
+                            <circle cx="50" cy="70" r="15" fill="#F5C400"/>
+                            <rect x="63" y="30" width="4" height="40" fill="#F5C400"/>
+                        </svg>
+                        <svg class="floating-note note-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 50%; right: 20%;">
+                            <circle cx="50" cy="70" r="15" fill="#FFF9EE"/>
+                            <rect x="63" y="30" width="4" height="40" fill="#FFF9EE"/>
+                        </svg>
+                    </div>
+                    <p style="margin-top: 1rem;">Animation <code>float-note</code> : mouvement + scale</p>
+                </div>
+
+                <div class="card">
+                    <h3>Formes 3D Morphing</h3>
+                    <div style="height: 300px; position: relative; background: var(--color-bg); border-radius: 12px; overflow: hidden;">
+                        <div class="shape-3d" style="width: 200px; height: 200px; top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+                    </div>
+                    <p style="margin-top: 1rem;">Animation <code>morph</code> : border-radius dynamique</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Effets 3D -->
+        <section class="demo-section">
+            <h2 class="demo-title">🎭 Effets 3D & Perspective</h2>
+            <div class="demo-grid">
+                <div class="card card-tilt">
+                    <h3>Card Tilt 3D</h3>
+                    <div class="card-image" style="background: linear-gradient(135deg, #A8D5BA, #2E5E37);"></div>
+                    <p>Survolez-moi ! Je pivote en 3D avec <code>perspective</code></p>
+                </div>
+
+                <div class="card card-hover-lift">
+                    <h3>Hover Lift</h3>
+                    <div class="card-image" style="background: linear-gradient(135deg, #89C2D9, #0A4BA0);"></div>
+                    <p>Je m'élève doucement avec une ombre dynamique</p>
+                </div>
+
+                <div class="card">
+                    <h3>Pulse Shadow</h3>
+                    <a href="#" class="btn btn-accent btn-pulse">Bouton avec Pulse</a>
+                    <p style="margin-top: 1rem;">L'ombre pulse en continu</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Iconographie Custom -->
+        <section class="demo-section">
+            <h2 class="demo-title">🎨 Iconographie SVG Custom</h2>
+            <div class="demo-grid">
+                <div class="card card-hover-lift">
+                    <div class="icon-wrapper">
+                        <svg class="custom-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="40" fill="#2E5E37" opacity="0.1"/>
+                            <path d="M50 20 Q60 35 50 45 Q40 35 50 20 M45 45 L45 75 M55 45 L55 75 M40 60 Q45 65 50 60 Q55 65 60 60" 
+                                  stroke="#2E5E37" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Éco-responsable</h3>
+                    <p>Icône plante stylisée</p>
+                </div>
+
+                <div class="card card-hover-lift">
+                    <div class="icon-wrapper">
+                        <svg class="custom-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="40" fill="#F5C400" opacity="0.1"/>
+                            <ellipse cx="50" cy="60" rx="20" ry="25" fill="none" stroke="#F5C400" stroke-width="3"/>
+                            <rect x="47" y="25" width="6" height="35" fill="#F5C400" rx="3"/>
+                            <circle cx="50" cy="25" r="5" fill="#F5C400"/>
+                        </svg>
+                    </div>
+                    <h3>100% Folk</h3>
+                    <p>Icône microphone</p>
+                </div>
+
+                <div class="card card-hover-lift">
+                    <div class="icon-wrapper">
+                        <svg class="custom-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="40" fill="#0A4BA0" opacity="0.1"/>
+                            <path d="M30 50 Q30 35 40 35 Q45 35 45 40 L45 70 M55 40 Q55 35 60 35 Q70 35 70 50 Q70 65 60 65 L40 65" 
+                                  stroke="#0A4BA0" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Convivial</h3>
+                    <p>Icône personnes stylisées</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Illustrations Contextuelles -->
+        <section class="demo-section">
+            <h2 class="demo-title">🏔️ Illustrations Contextuelles</h2>
+            <div class="demo-grid">
+                <div class="card">
+                    <h3>Mountain Echoes</h3>
+                    <div class="card-image" style="background: linear-gradient(135deg, #A8D5BA 0%, #2E5E37 100%); position: relative;">
+                        <svg style="position: absolute; bottom: 0; width: 100%; height: 50%;" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0,100 L50,40 L100,60 L150,20 L200,100 Z" fill="rgba(255,249,238,0.3)"/>
+                            <path d="M0,100 L70,50 L130,70 L200,100 Z" fill="rgba(255,249,238,0.2)"/>
+                        </svg>
+                    </div>
+                    <p>Montagnes stylisées</p>
+                </div>
+
+                <div class="card">
+                    <h3>The Wandering Souls</h3>
+                    <div class="card-image" style="background: linear-gradient(135deg, #89C2D9 0%, #0A4BA0 100%); position: relative;">
+                        <svg style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="30" fill="rgba(255,249,238,0.2)" class="pulse-circle"/>
+                            <path d="M50,30 Q60,40 50,50 Q40,40 50,30" fill="rgba(255,249,238,0.3)"/>
+                        </svg>
+                    </div>
+                    <p>Âme errante pulsante</p>
+                </div>
+
+                <div class="card">
+                    <h3>Claire & Les Bois</h3>
+                    <div class="card-image" style="background: linear-gradient(135deg, #D4A373 0%, #8B6F47 100%); position: relative;">
+                        <svg style="position: absolute; bottom: 0; width: 100%; height: 60%;" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="40" y="50" width="10" height="50" fill="rgba(46,94,55,0.3)"/>
+                            <path d="M45,50 L35,30 L55,30 Z" fill="rgba(46,94,55,0.4)"/>
+                            <rect x="80" y="40" width="10" height="60" fill="rgba(46,94,55,0.3)"/>
+                            <path d="M85,40 L75,15 L95,15 Z" fill="rgba(46,94,55,0.4)"/>
+                            <rect x="120" y="55" width="10" height="45" fill="rgba(46,94,55,0.3)"/>
+                            <path d="M125,55 L115,35 L135,35 Z" fill="rgba(46,94,55,0.4)"/>
+                        </svg>
+                    </div>
+                    <p>Forêt minimaliste</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Effet Glitch -->
+        <section class="demo-section">
+            <h2 class="demo-title">⚡ Effet Glitch</h2>
+            <div style="text-align: center; padding: 4rem; background: var(--color-bg-alt); border-radius: 16px;">
+                <h1 class="glitch" data-text="Festival Jumelages">Festival Jumelages</h1>
+                <p style="margin-top: 1rem; color: #666;">Survolez le titre pour voir l'effet glitch !</p>
+            </div>
+        </section>
+
+        <!-- 6. Badges & Tags -->
+        <section class="demo-section">
+            <h2 class="demo-title">🏷️ Badges & Tags</h2>
+            <div class="demo-grid">
+                <div class="card" style="position: relative;">
+                    <div class="card-badge">Nouveau</div>
+                    <h3>Card avec Badge</h3>
+                    <p>Badge positionné en haut à droite</p>
+                    <span class="card-tag">Folk Rock</span>
+                    <span class="card-tag">Live</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Boutons Stylés -->
+        <section class="demo-section">
+            <h2 class="demo-title">🎯 Boutons avec Effets</h2>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#" class="btn btn-primary">Bouton Primary</a>
+                <a href="#" class="btn btn-accent">Bouton Accent</a>
+                <a href="#" class="btn btn-accent btn-pulse">Bouton Pulse</a>
+                <button class="filter-btn">Filtre Normal</button>
+                <button class="filter-btn active">Filtre Actif</button>
+            </div>
+        </section>
+
+    </div>
+
+    <footer style="margin-top: 4rem;">
+        <div class="container" style="text-align: center; padding: 2rem;">
+            <p>🎨 Tous ces effets sont créés en <strong>CSS pur</strong>, sans librairies JavaScript lourdes.</p>
+            <p style="margin-top: 1rem; opacity: 0.7;">Éco-conçu • Performant • Original</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
