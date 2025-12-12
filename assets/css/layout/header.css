@@ -27,109 +27,74 @@ header {
     text-transform: uppercase;
 }
 
-/* Icône de recherche */
-.search-icon {
+/* Bouton recherche Neo-Brutalism */
+.search-toggle {
     background: var(--accent);
     border: var(--border-width) solid var(--dark);
     box-shadow: var(--shadow-sm) var(--dark);
-    padding: 0.7rem;
+    padding: 0.6rem;
     cursor: pointer;
-    transition: var(--transition-fast);
     display: flex;
     align-items: center;
-    justify-content: center;
     color: var(--dark);
+    transition: var(--transition-fast);
 }
 
-.search-icon:hover {
+.search-toggle:hover {
     background: var(--primary);
     color: var(--white);
-    box-shadow: var(--shadow-md) var(--dark);
-    transform: translate(-2px, -2px);
 }
 
-.search-icon:active {
-    transform: translate(0, 0);
-    box-shadow: var(--shadow-sm) var(--dark);
+.search-toggle:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
 }
 
-.search-icon svg {
+.search-toggle svg {
     display: block;
 }
 
-/* Barre de recherche (cachée par défaut) */
-.search-bar {
+/* Dropdown recherche */
+.search-dropdown {
     position: fixed;
-    top: 0;
+    top: 70px;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: rgba(26, 26, 26, 0.95);
-    backdrop-filter: blur(10px);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    padding: var(--space-xl);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    background: var(--white);
+    border-bottom: var(--border-width) solid var(--dark);
+    box-shadow: 0 var(--shadow-md) var(--dark);
+    padding: var(--space-md);
+    z-index: 999;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
-.search-bar.active {
-    display: flex;
-    opacity: 1;
-    animation: fadeIn 0.3s ease;
+.search-dropdown.active {
+    max-height: 100px;
+    padding: var(--space-md);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.search-bar input {
+.search-dropdown input {
     width: 100%;
-    max-width: 600px;
-    padding: 1.5rem 2rem;
-    border: var(--border-width-thick) solid var(--white);
-    background: var(--dark);
+    padding: 0.8rem 1rem;
+    border: var(--border-width) solid var(--dark);
+    background: var(--white);
     font-family: var(--font-body);
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
-    color: var(--white);
-    outline: none;
-    box-shadow: var(--shadow-xl) var(--accent);
-}
-
-.search-bar input::placeholder {
-    color: var(--white);
-    opacity: 0.5;
-}
-
-.search-bar input:focus {
-    border-color: var(--accent);
-    box-shadow: var(--shadow-xl) var(--primary);
-}
-
-.search-close {
-    position: absolute;
-    top: var(--space-xl);
-    right: var(--space-xl);
-    background: var(--accent);
-    border: var(--border-width) solid var(--white);
-    box-shadow: var(--shadow-md) var(--white);
     color: var(--dark);
-    font-size: 2rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: var(--transition-fast);
-    font-weight: 900;
-    line-height: 1;
+    box-shadow: var(--shadow-sm) var(--dark);
 }
 
-.search-close:hover {
-    background: var(--primary);
-    color: var(--white);
-    transform: rotate(90deg);
+.search-dropdown input:focus {
+    outline: none;
+    box-shadow: var(--shadow-md) var(--accent);
+}
+
+.search-dropdown input::placeholder {
+    color: var(--dark);
+    opacity: 0.4;
 }
 
 nav {
