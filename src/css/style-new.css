@@ -299,6 +299,11 @@ nav a:focus-visible {
     max-width: 500px;
 }
 
+.hero-left .btn {
+    position: relative;
+    z-index: 10;
+}
+
 .hero-right {
     background: var(--accent);
     position: relative;
