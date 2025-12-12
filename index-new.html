@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Festival Jumelages - Festival folk gratuit à Montbéliard. Musique, nature et convivialité.">
+    <title>Festival Jumelages - Accueil</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Jumelages</a>
+            <div class="burger" aria-label="Menu">☰</div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Accueil</a>
+                <a href="programme.html">Programme</a>
+                <a href="artistes.html">Artistes</a>
+                <a href="scenes.html">Scènes</a>
+                <a href="infos.html">Infos Pratiques</a>
+                <a href="contact.html" class="btn btn-primary">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section avec illustrations 3D animées -->
+    <section class="hero">
+        <!-- Illustrations SVG animées en arrière-plan -->
+        <div class="hero-illustration">
+            <svg class="floating-guitar" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="guitarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#2E5E37;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#4A8B58;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <!-- Corps de la guitare -->
+                <ellipse cx="100" cy="180" rx="60" ry="80" fill="url(#guitarGradient)" opacity="0.8"/>
+                <ellipse cx="100" cy="180" rx="35" ry="50" fill="#FFF9EE"/>
+                <!-- Manche -->
+                <rect x="90" y="50" width="20" height="130" fill="#2E5E37" rx="10"/>
+                <!-- Cordes -->
+                <line x1="95" y1="50" x2="95" y2="250" stroke="#F5C400" stroke-width="1"/>
+                <line x1="100" y1="50" x2="100" y2="250" stroke="#F5C400" stroke-width="1"/>
+                <line x1="105" y1="50" x2="105" y2="250" stroke="#F5C400" stroke-width="1"/>
+            </svg>
+            
+            <svg class="floating-note note-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="70" r="15" fill="#F5C400"/>
+                <rect x="63" y="30" width="4" height="40" fill="#F5C400"/>
+            </svg>
+            
+            <svg class="floating-note note-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="70" r="15" fill="#0A4BA0"/>
+                <rect x="63" y="30" width="4" height="40" fill="#0A4BA0"/>
+            </svg>
+            
+            <svg class="floating-note note-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="70" r="15" fill="#2E5E37"/>
+                <rect x="63" y="30" width="4" height="40" fill="#2E5E37"/>
+            </svg>
+
+            <!-- Formes organiques 3D -->
+            <div class="shape-3d shape-1"></div>
+            <div class="shape-3d shape-2"></div>
+            <div class="shape-3d shape-3"></div>
+        </div>
+
+        <div class="container hero-content animate-slide-up">
+            <span class="hero-dates">12 - 14 Juillet 2025 • Montbéliard</span>
+            <h1 class="glitch" data-text="Le rendez-vous folk">Le rendez-vous folk <br>au cœur de la nature</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--color-text-light);">Trois jours de musique, de partage et de découvertes dans un cadre exceptionnel. Entrée libre et gratuite.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="programme.html" class="btn btn-accent btn-pulse">Découvrir le programme</a>
+                <a href="contact.html" class="btn btn-primary">Devenir bénévole</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valeurs avec icônes SVG personnalisées -->
+    <section class="section values-section">
+        <div class="container">
+            <div class="grid grid-3">
+                <div class="card card-hover-lift">
+                    <div class="icon-wrapper">
+                        <svg class="custom-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="40" fill="#2E5E37" opacity="0.1"/>
+                            <path d="M50 20 Q60 35 50 45 Q40 35 50 20 M45 45 L45 75 M55 45 L55 75 M40 60 Q45 65 50 60 Q55 65 60 60" 
+                                  stroke="#2E5E37" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Éco-responsable</h3>
+                    <p>Un festival engagé pour l'environnement : zéro plastique, produits locaux et mobilité douce.</p>
+                </div>
+                <div class="card card-hover-lift" style="animation-delay: 0.1s;">
+                    <div class="icon-wrapper">
+                        <svg class="custom-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="40" fill="#F5C400" opacity="0.1"/>
+                            <ellipse cx="50" cy="60" rx="20" ry="25" fill="none" stroke="#F5C400" stroke-width="3"/>
+                            <rect x="47" y="25" width="6" height="35" fill="#F5C400" rx="3"/>
+                            <circle cx="50" cy="25" r="5" fill="#F5C400"/>
+                        </svg>
+                    </div>
+                    <h3>100% Folk</h3>
+                    <p>Une programmation pointue mêlant artistes internationaux et pépites locales.</p>
+                </div>
+                <div class="card card-hover-lift" style="animation-delay: 0.2s;">
+                    <div class="icon-wrapper">
+                        <svg class="custom-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="40" fill="#0A4BA0" opacity="0.1"/>
+                            <path d="M30 50 Q30 35 40 35 Q45 35 45 40 L45 70 M55 40 Q55 35 60 35 Q70 35 70 50 Q70 65 60 65 L40 65" 
+                                  stroke="#0A4BA0" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Gratuit & Convivial</h3>
+                    <p>L'accessibilité pour tous est notre priorité. Venez comme vous êtes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aperçu Programme avec effet parallaxe -->
+    <section class="section artists-preview" style="background: linear-gradient(180deg, #fff 0%, #FFF9EE 100%);">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <h2>À l'affiche</h2>
+            </div>
+            <div class="grid grid-3">
+                <article class="card card-tilt">
+                    <div class="card-image" style="background: linear-gradient(135deg, #A8D5BA 0%, #2E5E37 100%); position: relative; overflow: visible;">
+                        <!-- Illustration de montagne stylisée -->
+                        <svg style="position: absolute; bottom: 0; width: 100%; height: 50%;" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0,100 L50,40 L100,60 L150,20 L200,100 Z" fill="rgba(255,249,238,0.3)"/>
+                            <path d="M0,100 L70,50 L130,70 L200,100 Z" fill="rgba(255,249,238,0.2)"/>
+                        </svg>
+                        <div class="card-badge">Vendredi</div>
+                    </div>
+                    <h3>Mountain Echoes</h3>
+                    <p style="color: #666;">20h00 • Grande Scène</p>
+                    <span class="card-tag">Folk Rock</span>
+                </article>
+                <article class="card card-tilt" style="animation-delay: 0.1s;">
+                    <div class="card-image" style="background: linear-gradient(135deg, #89C2D9 0%, #0A4BA0 100%); position: relative; overflow: visible;">
+                        <!-- Illustration d'âme errante -->
+                        <svg style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%; height: 60%;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="30" fill="rgba(255,249,238,0.2)" class="pulse-circle"/>
+                            <path d="M50,30 Q60,40 50,50 Q40,40 50,30" fill="rgba(255,249,238,0.3)"/>
+                        </svg>
+                        <div class="card-badge">Samedi</div>
+                    </div>
+                    <h3>The Wandering Souls</h3>
+                    <p style="color: #666;">21h00 • Grande Scène</p>
+                    <span class="card-tag">Indie Folk</span>
+                </article>
+                <article class="card card-tilt" style="animation-delay: 0.2s;">
+                    <div class="card-image" style="background: linear-gradient(135deg, #D4A373 0%, #8B6F47 100%); position: relative; overflow: visible;">
+                        <!-- Illustration de forêt -->
+                        <svg style="position: absolute; bottom: 0; width: 100%; height: 60%;" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="40" y="50" width="10" height="50" fill="rgba(46,94,55,0.3)"/>
+                            <path d="M45,50 L35,30 L55,30 Z" fill="rgba(46,94,55,0.4)"/>
+                            <rect x="80" y="40" width="10" height="60" fill="rgba(46,94,55,0.3)"/>
+                            <path d="M85,40 L75,15 L95,15 Z" fill="rgba(46,94,55,0.4)"/>
+                            <rect x="120" y="55" width="10" height="45" fill="rgba(46,94,55,0.3)"/>
+                            <path d="M125,55 L115,35 L135,35 Z" fill="rgba(46,94,55,0.4)"/>
+                        </svg>
+                        <div class="card-badge">Dimanche</div>
+                    </div>
+                    <h3>Claire & Les Bois</h3>
+                    <p style="color: #666;">19h00 • Grande Scène</p>
+                    <span class="card-tag">Chanson Folk</span>
+                </article>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="programme.html" class="btn btn-primary">Voir toute la programmation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partenaires -->
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <h3 style="margin-bottom: 2rem; color: #888;">Ils nous soutiennent</h3>
+            <div class="grid grid-4" style="opacity: 0.6;">
+                <div><strong>Ville de Montbéliard</strong></div>
+                <div><strong>Région BFC</strong></div>
+                <div><strong>Radio Folk</strong></div>
+                <div><strong>BioCoop</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>Festival Jumelages</h4>
+                <p>Association Loi 1901<br>Montbéliard, France</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <ul style="line-height: 2;">
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="infos.html">Infos pratiques</a></li>
+                    <li><a href="contact.html">Devenir bénévole</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Suivez-nous</h4>
+                <p>Instagram • Facebook</p>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.7;">
+            <p>&copy; 2025 Festival Jumelages. Site éco-conçu.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

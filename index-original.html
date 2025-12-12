@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Jumelages - Design Ultra-Original</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style-new.css">
+</head>
+<body>
+
+    <!-- HEADER MINIMAL -->
+    <header>
+        <div class="logo">Jumelages</div>
+        <div class="burger">☰</div>
+        <nav>
+            <a href="#" class="active">Accueil</a>
+            <a href="programme.html">Programme</a>
+            <a href="artistes.html">Artistes</a>
+            <a href="scenes.html">Scènes</a>
+            <a href="infos.html">Infos</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO ASYMÉTRIQUE -->
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-dates">12-14 JUILLET 2025</div>
+            <h1>LE FESTIVAL FOLK GRATUIT</h1>
+            <p>Trois jours de musique, de nature et de partage au cœur de Montbéliard. Venez vibrer avec nous.</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="programme.html" class="btn btn-accent">VOIR LE PROGRAMME</a>
+                <a href="contact.html" class="btn btn-primary">DEVENIR BÉNÉVOLE</a>
+            </div>
+        </div>
+        
+        <div class="hero-right">
+            <!-- Illustration graphique -->
+            <svg class="hero-graphic" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="200" cy="200" r="100" fill="rgba(10, 75, 160, 0.3)" />
+                <circle cx="250" cy="150" r="80" fill="rgba(46, 94, 55, 0.4)" />
+                <circle cx="150" cy="250" r="90" fill="rgba(10, 75, 160, 0.2)" />
+            </svg>
+            
+            <div class="hero-numbers">2025</div>
+        </div>
+    </section>
+
+    <!-- VALEURS - GRILLE CASSÉE -->
+    <section class="values-section">
+        <div class="values-grid">
+            <div class="value-card">
+                <span class="value-number">01</span>
+                <h3>Éco-Responsable</h3>
+                <p>Un festival zéro déchet, alimentation locale et mobilité douce. Parce que la musique doit respecter la planète.</p>
+            </div>
+            
+            <div class="value-card">
+                <span class="value-number">02</span>
+                <h3>100% Folk</h3>
+                <p>Des artistes authentiques, des sonorités acoustiques, une programmation pointue qui célèbre le folk sous toutes ses formes.</p>
+            </div>
+            
+            <div class="value-card">
+                <span class="value-number">03</span>
+                <h3>Gratuit & Accessible</h3>
+                <p>La culture pour tous, sans barrière. Venez comme vous êtes, l'entrée est libre et l'esprit bienveillant.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TYPOGRAPHIE GÉANTE -->
+    <section class="big-text-section">
+        <h2>
+            UNE SCÈNE<br>
+            <span class="highlight">NATURE</span><br>
+            ET MUSIQUE
+        </h2>
+        <p style="font-size: 1.5rem; max-width: 800px; margin: 0 auto; color: #666;">
+            Au pied du château de Montbéliard, trois scènes accueillent les plus beaux noms du folk européen dans un cadre exceptionnel.
+        </p>
+    </section>
+
+    <!-- ARTISTES - LAYOUT MAGAZINE -->
+    <section class="artists-section">
+        <div class="section-header">
+            <h2>LES ARTISTES</h2>
+        </div>
+        
+        <div class="artists-grid">
+            <!-- Card 1 - Grande -->
+            <div class="artist-card">
+                <div class="artist-info">
+                    <span class="artist-badge">VENDREDI 20H</span>
+                    <h3>Mountain Echoes</h3>
+                    <p>Folk rock énergique • Grande Scène</p>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="artist-card">
+                <div class="artist-info">
+                    <span class="artist-badge">SAMEDI 21H</span>
+                    <h3>The Wandering Souls</h3>
+                    <p>Indie folk • Grande Scène</p>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="artist-card">
+                <div class="artist-info">
+                    <span class="artist-badge">DIMANCHE 19H</span>
+                    <h3>Claire & Les Bois</h3>
+                    <p>Chanson folk • Grande Scène</p>
+                </div>
+            </div>
+            
+            <!-- Card 4 - Large -->
+            <div class="artist-card">
+                <div class="artist-info">
+                    <span class="artist-badge">TOUT LE WEEKEND</span>
+                    <h3>+15 Artistes</h3>
+                    <p>Découvrez toute la programmation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section style="background: var(--accent); padding: 8rem 3rem; text-align: center; border-top: 6px solid var(--dark);">
+        <h2 style="font-size: clamp(3rem, 8vw, 8rem); font-weight: 900; font-family: var(--font-display); margin-bottom: 2rem; color: var(--dark); line-height: 0.9;">
+            PRÊT À VIBRER ?
+        </h2>
+        <p style="font-size: 1.5rem; margin-bottom: 3rem; color: var(--dark); max-width: 700px; margin-left: auto; margin-right: auto;">
+            Gratuit • 12-14 Juillet • Montbéliard
+        </p>
+        <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+            <a href="programme.html" class="btn btn-primary">VOIR LE PROGRAMME</a>
+            <a href="contact.html" class="btn btn-primary">NOUS CONTACTER</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Festival Jumelages</h4>
+                <p>Un événement culturel et éco-responsable au cœur de Montbéliard. Association loi 1901.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul style="list-style: none;">
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="artistes.html">Artistes</a></li>
+                    <li><a href="scenes.html">Scènes</a></li>
+                    <li><a href="infos.html">Infos pratiques</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul style="list-style: none;">
+                    <li><a href="contact.html">Formulaire</a></li>
+                    <li><a href="#">Bénévolat</a></li>
+                    <li><a href="#">Presse</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Suivez-nous</h4>
+                <ul style="list-style: none;">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Festival Jumelages • Site éco-conçu</p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('nav');
+        
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burger.textContent = nav.classList.contains('active') ? '✕' : '☰';
+        });
+    </script>
+
+</body>
+</html>
